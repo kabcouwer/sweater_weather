@@ -4,6 +4,7 @@ RSpec.describe 'Mapquest API Facade' do
   describe 'coordinates' do
     it 'can find long. and lat.', :vcr do
       location = 'denver,co'
+      
       response = MapquestFacade.coordinates(location)
 
       expect(response).to be_a(Hash)
