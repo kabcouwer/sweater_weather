@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Open Weather Service' do
+RSpec.describe OpenWeatherService, :vcr do
   describe 'all_weather' do
-    it 'has weather data; current, hourly, daily', :vcr do
+    it 'has weather data; current, hourly, daily' do
       # {:lat=>39.738453, :lng=>-104.984853}
       lat = 39.738453
       lon = -104.984853

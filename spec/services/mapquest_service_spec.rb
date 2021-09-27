@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe 'Mapquest API Service' do
+RSpec.describe MapquestService, :vcr do
   describe 'coordinates' do
-    it 'can find long. and lat.', :vcr do
+    it 'can find long. and lat.' do
       location = 'denver,co'
-      
+
       response = MapquestService.coordinates(location)
 
       expect(response).to be_a(Hash)

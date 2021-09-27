@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe 'Mapquest API Facade' do
+RSpec.describe MapquestFacade, :vcr do
   describe 'coordinates' do
-    it 'can find long. and lat.', :vcr do
+    it 'can find long. and lat.' do
       location = 'denver,co'
-      
+
       response = MapquestFacade.coordinates(location)
 
       expect(response).to be_a(Hash)
