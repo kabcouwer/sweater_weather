@@ -12,4 +12,18 @@ class Image
     @author = data[:results].first[:user][:username]
     @profile = data[:results].first[:user][:links][:html]
   end
+  
+  def serialize
+    {
+      image: {
+        location: @location,
+        image_url: @image_url,
+        credit: {
+          source: @source,
+          author: @author,
+          profile: @profile
+        }
+      }
+    }
+  end
 end

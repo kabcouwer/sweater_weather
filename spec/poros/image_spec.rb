@@ -15,4 +15,28 @@ RSpec.describe Image, :vcr do
     expect(@image.author).to be_a(String)
     expect(@image.profile).to be_a(String)
   end
+
+  it 'can serialize' do
+    expect(@image.serialize).to be_a(Hash)
+    expect(@image.serialize).to have_key(:image)
+    expect(@image.serialize[:image]).to be_a(Hash)
+
+    expect(@image.serialize[:image]).to have_key(:location)
+    expect(@image.serialize[:image][:location]).to be_a(String)
+
+    expect(@image.serialize[:image]).to have_key(:image_url)
+    expect(@image.serialize[:image][:image_url]).to be_a(String)
+
+    expect(@image.serialize[:image]).to have_key(:credit)
+    expect(@image.serialize[:image][:credit]).to be_a(Hash)
+
+    expect(@image.serialize[:image][:credit]).to have_key(:source)
+    expect(@image.serialize[:image][:credit][:source]).to be_a(String)
+
+    expect(@image.serialize[:image][:credit]).to have_key(:author)
+    expect(@image.serialize[:image][:credit][:author]).to be_a(String)
+
+    expect(@image.serialize[:image][:credit]).to have_key(:profile)
+    expect(@image.serialize[:image][:credit][:profile]).to be_a(String)
+  end
 end

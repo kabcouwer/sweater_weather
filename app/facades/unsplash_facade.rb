@@ -1,6 +1,6 @@
 class UnsplashFacade
-  def picture(location)
+  def self.picture(location)
     data = UnsplashService.picture(location)
-    Image.new(data)
+    Image.new(data, location)
   end
 end
