@@ -7,12 +7,9 @@ RSpec.describe MapquestFacade, :vcr do
 
       response = MapquestFacade.coordinates(location)
 
-      expect(response).to be_a(Hash)
-      expect(response).to have_key(:lat)
-      expect(response[:lat]).to be_a(Float)
-
-      expect(response).to have_key(:lng)
-      expect(response[:lng]).to be_a(Float)
+      expect(response).to be_an(Array)
+      expect(response.first).to be_a(Float)
+      expect(response.second).to be_a(Float)
     end
   end
 end
