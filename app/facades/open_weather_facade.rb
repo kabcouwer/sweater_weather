@@ -11,4 +11,8 @@ class OpenWeatherFacade
   def self.daily(response)
     response[:daily].map { |data| DailyWeather.new(data) }
   end
+
+  def self.hourly(response)
+    response[:hourly].map { |data| HourlyWeather.new(data) }
+  end
 end

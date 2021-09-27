@@ -29,7 +29,7 @@ RSpec.describe DailyWeather do
       expect(result).to have_key(:date)
       expect(result).to have_key(:sunrise)
       expect(result).to have_key(:sunset)
-      expect(result).to have_key(:max_temp)
+      expect(result).to have_key(:sunset)
       expect(result).to have_key(:min_temp)
       expect(result).to have_key(:conditions)
       expect(result).to have_key(:icon)

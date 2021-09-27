@@ -25,9 +25,10 @@ class CurrentWeather
 
   def serialize
     {
-      datetime: @datetime,
-      sunrise: @sunrise,
-      sunset: @temperature,
+      datetime: @datetime.to_s,
+      sunrise: @sunrise.to_s,
+      sunset: @sunset.to_s,
+      temperature: @temperature,
       feels_like: @feels_like,
       humidity: @humidity,
       uvi: @uvi,
