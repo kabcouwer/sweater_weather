@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.18.0 (Ubuntu)
       Date:
-      - Mon, 27 Sep 2021 17:07:10 GMT
+      - Mon, 27 Sep 2021 17:36:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Access-Control-Max-Age:
       - '86400'
       X-Ol-Stats:
-      - '"SR 1 0.739 TT 0 0.740"'
+      - '"SR 1 0.080 TT 0 0.082"'
       Referrer-Policy:
       - no-referrer-when-downgrade
     body:
@@ -271,7 +271,7 @@ http_interactions:
             "q": "denver co",
             "offset": null
         }
-  recorded_at: Mon, 27 Sep 2021 17:07:10 GMT
+  recorded_at: Mon, 27 Sep 2021 17:36:28 GMT
 - request:
     method: get
     uri: http://www.mapquestapi.com/geocoding/v1/address?key=vCvtzcH6yjvK20AHHRVmojwFJdMvr7fe&location=denver,co
@@ -293,7 +293,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 27 Sep 2021 17:07:10 GMT
+      - Mon, 27 Sep 2021 17:36:28 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -309,13 +309,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 27 Sep 2021 17:07:10 GMT
+      - Mon, 27 Sep 2021 17:36:28 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=C33071F8CCF4172C75C6C01020782F1C; Path=/; HttpOnly
+      - JSESSIONID=EAC5EC7B2506727358C0E0A812532839; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -325,9 +325,9 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=vCvtzcH6yjvK20AHHRVmojwFJdMvr7fe&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=918699479"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=vCvtzcH6yjvK20AHHRVmojwFJdMvr7fe&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1252650004"}]}]}'
-  recorded_at: Mon, 27 Sep 2021 17:07:10 GMT
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=vCvtzcH6yjvK20AHHRVmojwFJdMvr7fe&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-779039933"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=vCvtzcH6yjvK20AHHRVmojwFJdMvr7fe&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=506176399"}]}]}'
+  recorded_at: Mon, 27 Sep 2021 17:36:28 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=8a0cb1ce38af428623003d31c27714a7&exclude=minutely,alerts&lat=39.738453&lon=-104.984853&units=imperial
@@ -351,11 +351,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 27 Sep 2021 17:07:11 GMT
+      - Mon, 27 Sep 2021 17:36:29 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '17719'
+      - '17714'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -368,13 +368,13 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1632762430,"sunrise":1632747150,"sunset":1632790142,"temp":79.11,"feels_like":79.11,"pressure":1011,"humidity":22,"dew_point":37.04,"uvi":4.16,"clouds":40,"visibility":10000,"wind_speed":1.01,"wind_deg":265,"wind_gust":1.99,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}]},"hourly":[{"dt":1632762000,"temp":79.11,"feels_like":79.11,"pressure":1011,"humidity":22,"dew_point":37.04,"uvi":4.16,"clouds":40,"visibility":10000,"wind_speed":0.67,"wind_deg":159,"wind_gust":1.54,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"pop":0},{"dt":1632765600,"temp":79.81,"feels_like":79.81,"pressure":1011,"humidity":20,"dew_point":35.22,"uvi":5.53,"clouds":39,"visibility":10000,"wind_speed":1.7,"wind_deg":117,"wind_gust":3.91,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"pop":0},{"dt":1632769200,"temp":81.45,"feels_like":79.38,"pressure":1010,"humidity":17,"dew_point":32.49,"uvi":5.85,"clouds":25,"visibility":10000,"wind_speed":2.89,"wind_deg":123,"wind_gust":7.49,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"pop":0},{"dt":1632772800,"temp":83.93,"feels_like":81.05,"pressure":1008,"humidity":14,"dew_point":29.97,"uvi":5.34,"clouds":19,"visibility":10000,"wind_speed":3.38,"wind_deg":118,"wind_gust":8.21,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}],"pop":0},{"dt":1632776400,"temp":86.05,"feels_like":82.69,"pressure":1006,"humidity":12,"dew_point":28.09,"uvi":4.02,"clouds":18,"visibility":10000,"wind_speed":6.87,"wind_deg":109,"wind_gust":9.46,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}],"pop":0},{"dt":1632780000,"temp":87.6,"feels_like":83.95,"pressure":1004,"humidity":10,"dew_point":24.66,"uvi":2.49,"clouds":34,"visibility":10000,"wind_speed":12.03,"wind_deg":124,"wind_gust":10.76,"weather":[{"id":802,"main":"Clouds","description":"scattered
+      string: '{"lat":39.7385,"lon":-104.9849,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1632764189,"sunrise":1632747150,"sunset":1632790142,"temp":81.09,"feels_like":79.3,"pressure":1011,"humidity":21,"dew_point":37.51,"uvi":5.53,"clouds":33,"visibility":10000,"wind_speed":1.01,"wind_deg":114,"wind_gust":1.99,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}]},"hourly":[{"dt":1632762000,"temp":80.74,"feels_like":79,"pressure":1011,"humidity":19,"dew_point":34.7,"uvi":4.16,"clouds":34,"visibility":10000,"wind_speed":0.67,"wind_deg":159,"wind_gust":1.54,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1632765600,"temp":81.09,"feels_like":79.3,"pressure":1011,"humidity":21,"dew_point":37.51,"uvi":5.53,"clouds":33,"visibility":10000,"wind_speed":1.7,"wind_deg":117,"wind_gust":3.91,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1632769200,"temp":81.86,"feels_like":79.74,"pressure":1010,"humidity":19,"dew_point":35.62,"uvi":5.85,"clouds":27,"visibility":10000,"wind_speed":2.89,"wind_deg":123,"wind_gust":7.49,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1632772800,"temp":83.52,"feels_like":80.78,"pressure":1009,"humidity":16,"dew_point":32.65,"uvi":5.34,"clouds":22,"visibility":10000,"wind_speed":3.38,"wind_deg":118,"wind_gust":8.21,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1632776400,"temp":85.12,"feels_like":81.95,"pressure":1007,"humidity":14,"dew_point":30.78,"uvi":4.02,"clouds":20,"visibility":10000,"wind_speed":6.87,"wind_deg":109,"wind_gust":9.46,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1632780000,"temp":86.31,"feels_like":82.89,"pressure":1005,"humidity":12,"dew_point":28.27,"uvi":2.49,"clouds":34,"visibility":10000,"wind_speed":12.03,"wind_deg":124,"wind_gust":10.76,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"pop":0},{"dt":1632783600,"temp":86.56,"feels_like":83.08,"pressure":1004,"humidity":11,"dew_point":25.3,"uvi":1.06,"clouds":40,"visibility":10000,"wind_speed":13.44,"wind_deg":127,"wind_gust":11.77,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"pop":0},{"dt":1632787200,"temp":84.67,"feels_like":81.61,"pressure":1004,"humidity":12,"dew_point":26.89,"uvi":0.26,"clouds":42,"visibility":10000,"wind_speed":12.77,"wind_deg":129,"wind_gust":11.72,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"pop":0},{"dt":1632790800,"temp":81.52,"feels_like":79.36,"pressure":1005,"humidity":15,"dew_point":29.25,"uvi":0,"clouds":65,"visibility":10000,"wind_speed":11.03,"wind_deg":136,"wind_gust":17.49,"weather":[{"id":803,"main":"Clouds","description":"broken
@@ -417,8 +417,8 @@ http_interactions:
         clouds","icon":"04d"}],"pop":0},{"dt":1632924000,"temp":60.4,"feels_like":58.5,"pressure":1010,"humidity":50,"dew_point":41.45,"uvi":0.24,"clouds":98,"visibility":10000,"wind_speed":8.86,"wind_deg":51,"wind_gust":12.73,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04d"}],"pop":0},{"dt":1632927600,"temp":59.09,"feels_like":57.09,"pressure":1011,"humidity":51,"dew_point":41.07,"uvi":0.98,"clouds":98,"visibility":10000,"wind_speed":10.47,"wind_deg":51,"wind_gust":12.33,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04d"}],"pop":0},{"dt":1632931200,"temp":58.33,"feels_like":56.12,"pressure":1012,"humidity":48,"dew_point":38.48,"uvi":2.28,"clouds":98,"visibility":10000,"wind_speed":9.55,"wind_deg":46,"wind_gust":10.33,"weather":[{"id":804,"main":"Clouds","description":"overcast
-        clouds","icon":"04d"}],"pop":0}],"daily":[{"dt":1632765600,"sunrise":1632747150,"sunset":1632790142,"moonrise":1632804000,"moonset":1632770520,"moon_phase":0.71,"temp":{"day":79.81,"min":67.01,"max":87.6,"night":74.01,"eve":84.67,"morn":67.01},"feels_like":{"day":79.81,"night":72.1,"eve":81.61,"morn":64.35},"pressure":1011,"humidity":20,"dew_point":35.22,"wind_speed":13.44,"wind_deg":127,"wind_gust":21.09,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"clouds":39,"pop":0,"uvi":5.85},{"dt":1632852000,"sunrise":1632833607,"sunset":1632876443,"moonrise":1632893220,"moonset":1632860280,"moon_phase":0.75,"temp":{"day":78.87,"min":65.7,"max":80.98,"night":66.02,"eve":73,"morn":68.88},"feels_like":{"day":78.87,"night":64.2,"eve":71.31,"morn":66.65},"pressure":1000,"humidity":19,"dew_point":33.06,"wind_speed":13.15,"wind_deg":269,"wind_gust":16.69,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"04d"}],"pop":0}],"daily":[{"dt":1632765600,"sunrise":1632747150,"sunset":1632790142,"moonrise":1632804000,"moonset":1632770520,"moon_phase":0.71,"temp":{"day":81.09,"min":66.34,"max":86.56,"night":74.01,"eve":84.67,"morn":67.01},"feels_like":{"day":79.3,"night":72.1,"eve":81.61,"morn":64.35},"pressure":1011,"humidity":21,"dew_point":37.51,"wind_speed":13.44,"wind_deg":127,"wind_gust":21.09,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":33,"pop":0,"uvi":5.85},{"dt":1632852000,"sunrise":1632833607,"sunset":1632876443,"moonrise":1632893220,"moonset":1632860280,"moon_phase":0.75,"temp":{"day":78.87,"min":65.7,"max":80.98,"night":66.02,"eve":73,"morn":68.88},"feels_like":{"day":78.87,"night":64.2,"eve":71.31,"morn":66.65},"pressure":1000,"humidity":19,"dew_point":33.06,"wind_speed":13.15,"wind_deg":269,"wind_gust":16.69,"weather":[{"id":801,"main":"Clouds","description":"few
         clouds","icon":"02d"}],"clouds":21,"pop":0.32,"uvi":5.04},{"dt":1632938400,"sunrise":1632920064,"sunset":1632962745,"moonrise":0,"moonset":1632949800,"moon_phase":0.77,"temp":{"day":60.35,"min":53.06,"max":66.09,"night":53.06,"eve":57,"morn":62.22},"feels_like":{"day":58.1,"night":51.31,"eve":55.13,"morn":60.26},"pressure":1013,"humidity":43,"dew_point":37.85,"wind_speed":12.28,"wind_deg":336,"wind_gust":12.73,"weather":[{"id":501,"main":"Rain","description":"moderate
         rain","icon":"10d"}],"clouds":97,"pop":0.84,"rain":2.32,"uvi":5.16},{"dt":1633024800,"sunrise":1633006521,"sunset":1633049047,"moonrise":1632982860,"moonset":1633038900,"moon_phase":0.8,"temp":{"day":58.93,"min":49.95,"max":63.72,"night":59.34,"eve":63.23,"morn":49.95},"feels_like":{"day":56.3,"night":56.71,"eve":60.57,"morn":48.11},"pressure":1023,"humidity":38,"dew_point":32.83,"wind_speed":7.9,"wind_deg":166,"wind_gust":10.38,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04d"}],"clouds":98,"pop":0.76,"uvi":2.22},{"dt":1633111200,"sunrise":1633092979,"sunset":1633135349,"moonrise":1633072860,"moonset":1633127700,"moon_phase":0.83,"temp":{"day":66.27,"min":55.96,"max":71.47,"night":65.37,"eve":70.56,"morn":55.96},"feels_like":{"day":64,"night":62.98,"eve":68.16,"morn":53.37},"pressure":1019,"humidity":30,"dew_point":33.55,"wind_speed":6.73,"wind_deg":170,"wind_gust":9.71,"weather":[{"id":803,"main":"Clouds","description":"broken
@@ -426,277 +426,5 @@ http_interactions:
         sky","icon":"01d"}],"clouds":1,"pop":0,"uvi":3},{"dt":1633284000,"sunrise":1633265895,"sunset":1633307955,"moonrise":1633253640,"moonset":1633304460,"moon_phase":0.9,"temp":{"day":62.1,"min":52.93,"max":68.09,"night":59.54,"eve":64.85,"morn":52.93},"feels_like":{"day":59.56,"night":57.02,"eve":62.4,"morn":50.18},"pressure":1022,"humidity":33,"dew_point":32.74,"wind_speed":12.68,"wind_deg":66,"wind_gust":11.25,"weather":[{"id":801,"main":"Clouds","description":"few
         clouds","icon":"02d"}],"clouds":13,"pop":0.21,"uvi":3},{"dt":1633370400,"sunrise":1633352353,"sunset":1633394259,"moonrise":1633344180,"moonset":1633392540,"moon_phase":0.94,"temp":{"day":58.71,"min":51.76,"max":61.38,"night":51.76,"eve":54.77,"morn":54.16},"feels_like":{"day":56.68,"night":50.36,"eve":53.1,"morn":51.62},"pressure":1019,"humidity":51,"dew_point":40.28,"wind_speed":11.27,"wind_deg":18,"wind_gust":10.74,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":96,"pop":0.88,"rain":0.84,"uvi":3}]}'
-  recorded_at: Mon, 27 Sep 2021 17:07:11 GMT
-- request:
-    method: get
-    uri: http://openlibrary.org/search.json?limit=3&q=denver%20co
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.18.0 (Ubuntu)
-      Date:
-      - Mon, 27 Sep 2021 17:07:11 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Method:
-      - GET, OPTIONS
-      Access-Control-Max-Age:
-      - '86400'
-      X-Ol-Stats:
-      - '"SR 1 0.210 TT 0 0.212"'
-      Referrer-Policy:
-      - no-referrer-when-downgrade
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-            "numFound": 605,
-            "start": 0,
-            "numFoundExact": true,
-            "docs": [
-                {
-                    "key": "/works/OL8503198W",
-                    "text": [
-                        "/works/OL8503198W",
-                        "Denver, Co",
-                        "OL10909613M",
-                        "9780762507849",
-                        "0762507845",
-                        "Universal Map Enterprises",
-                        "OL2843451A",
-                        "Universal Map"
-                    ],
-                    "type": "work",
-                    "seed": [
-                        "/books/OL10909613M",
-                        "/works/OL8503198W",
-                        "/authors/OL2843451A"
-                    ],
-                    "title": "Denver, Co",
-                    "title_suggest": "Denver, Co",
-                    "has_fulltext": false,
-                    "edition_count": 1,
-                    "edition_key": [
-                        "OL10909613M"
-                    ],
-                    "publish_date": [
-                        "January 2001"
-                    ],
-                    "publish_year": [
-                        2001
-                    ],
-                    "first_publish_year": 2001,
-                    "isbn": [
-                        "9780762507849",
-                        "0762507845"
-                    ],
-                    "last_modified_i": 1338943517,
-                    "ebook_count_i": 0,
-                    "publisher": [
-                        "Universal Map Enterprises"
-                    ],
-                    "language": [
-                        "eng"
-                    ],
-                    "author_key": [
-                        "OL2843451A"
-                    ],
-                    "author_name": [
-                        "Universal Map"
-                    ],
-                    "publisher_facet": [
-                        "Universal Map Enterprises"
-                    ],
-                    "_version_": 1700720295581581317,
-                    "author_facet": [
-                        "OL2843451A Universal Map"
-                    ]
-                },
-                {
-                    "key": "/works/OL896607W",
-                    "text": [
-                        "/works/OL896607W",
-                        "Denver west, CO and Bailey, CO: Denver, CO",
-                        "39105, digital raster graphic data",
-                        "Denver west, CO and Bailey, CO: Denver, CO ",
-                        "OL10945157M",
-                        "9780607620054",
-                        "0607620056",
-                        "USGS Branch of Distribution",
-                        "OL79165A",
-                        "United States Geological Survey",
-                        "Geological Survey (U.S.)",
-                        "Geological Survey. (U.S.)",
-                        "United States. Geological survey.",
-                        "United States. Geological Survey",
-                        "United States. Geological Survey.",
-                        "Geological Survey (U. S.)",
-                        "Geological Survey (U.S.) 088",
-                        "U.S. Geological Survey",
-                        "Geological Survey (U .S.)"
-                    ],
-                    "type": "work",
-                    "seed": [
-                        "/books/OL10945157M",
-                        "/works/OL896607W",
-                        "/authors/OL79165A"
-                    ],
-                    "title": "Denver west, CO and Bailey, CO: Denver, CO",
-                    "title_suggest": "Denver west, CO and Bailey, CO: Denver, CO",
-                    "subtitle": "39105, digital raster graphic data",
-                    "has_fulltext": false,
-                    "edition_count": 1,
-                    "edition_key": [
-                        "OL10945157M"
-                    ],
-                    "publish_date": [
-                        "1996"
-                    ],
-                    "publish_year": [
-                        1996
-                    ],
-                    "first_publish_year": 1996,
-                    "isbn": [
-                        "9780607620054",
-                        "0607620056"
-                    ],
-                    "last_modified_i": 1272517172,
-                    "ebook_count_i": 0,
-                    "publisher": [
-                        "USGS Branch of Distribution"
-                    ],
-                    "language": [
-                        "eng"
-                    ],
-                    "author_key": [
-                        "OL79165A"
-                    ],
-                    "author_name": [
-                        "United States Geological Survey"
-                    ],
-                    "author_alternative_name": [
-                        "Geological Survey (U.S.)",
-                        "Geological Survey. (U.S.)",
-                        "United States. Geological survey.",
-                        "United States. Geological Survey",
-                        "United States. Geological Survey.",
-                        "Geological Survey (U. S.)",
-                        "Geological Survey (U.S.) 088",
-                        "U.S. Geological Survey",
-                        "Geological Survey (U .S.)"
-                    ],
-                    "publisher_facet": [
-                        "USGS Branch of Distribution"
-                    ],
-                    "_version_": 1700720896589692931,
-                    "author_facet": [
-                        "OL79165A United States Geological Survey"
-                    ]
-                },
-                {
-                    "key": "/works/OL896605W",
-                    "text": [
-                        "/works/OL896605W",
-                        "Denver East, CO and Castle Rock, CO: Denver, CO",
-                        "39104, digital raster graphic data",
-                        "Denver East, CO and Castle Rock, CO: Denver, CO ",
-                        "OL10945156M",
-                        "0607620048",
-                        "9780607620047",
-                        "USGS Branch of Distribution",
-                        "OL79165A",
-                        "United States Geological Survey",
-                        "Geological Survey (U.S.)",
-                        "Geological Survey. (U.S.)",
-                        "United States. Geological survey.",
-                        "United States. Geological Survey",
-                        "United States. Geological Survey.",
-                        "Geological Survey (U. S.)",
-                        "Geological Survey (U.S.) 088",
-                        "U.S. Geological Survey",
-                        "Geological Survey (U .S.)"
-                    ],
-                    "type": "work",
-                    "seed": [
-                        "/books/OL10945156M",
-                        "/works/OL896605W",
-                        "/authors/OL79165A"
-                    ],
-                    "title": "Denver East, CO and Castle Rock, CO: Denver, CO",
-                    "title_suggest": "Denver East, CO and Castle Rock, CO: Denver, CO",
-                    "subtitle": "39104, digital raster graphic data",
-                    "has_fulltext": false,
-                    "edition_count": 1,
-                    "edition_key": [
-                        "OL10945156M"
-                    ],
-                    "publish_date": [
-                        "1996"
-                    ],
-                    "publish_year": [
-                        1996
-                    ],
-                    "first_publish_year": 1996,
-                    "isbn": [
-                        "0607620048",
-                        "9780607620047"
-                    ],
-                    "last_modified_i": 1272517172,
-                    "ebook_count_i": 0,
-                    "publisher": [
-                        "USGS Branch of Distribution"
-                    ],
-                    "language": [
-                        "eng"
-                    ],
-                    "author_key": [
-                        "OL79165A"
-                    ],
-                    "author_name": [
-                        "United States Geological Survey"
-                    ],
-                    "author_alternative_name": [
-                        "Geological Survey (U.S.)",
-                        "Geological Survey. (U.S.)",
-                        "United States. Geological survey.",
-                        "United States. Geological Survey",
-                        "United States. Geological Survey.",
-                        "Geological Survey (U. S.)",
-                        "Geological Survey (U.S.) 088",
-                        "U.S. Geological Survey",
-                        "Geological Survey (U .S.)"
-                    ],
-                    "publisher_facet": [
-                        "USGS Branch of Distribution"
-                    ],
-                    "_version_": 1700720895856738305,
-                    "author_facet": [
-                        "OL79165A United States Geological Survey"
-                    ]
-                }
-            ],
-            "num_found": 605,
-            "q": "denver co",
-            "offset": null
-        }
-  recorded_at: Mon, 27 Sep 2021 17:07:11 GMT
+  recorded_at: Mon, 27 Sep 2021 17:36:29 GMT
 recorded_with: VCR 6.0.0

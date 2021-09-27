@@ -52,4 +52,16 @@ RSpec.describe 'book info by destination' do
       expect(result[:data][:attributes][:books].first[:publisher]).to be_an(Array)
     end
   end
+
+  describe 'sad paths' do
+    it 'returns bad request if quantity is 0' do
+      get '/api/v1/book-search?location=denver,co&quantity=0'
+
+      expect(response.status).to eq(400)
+
+      result = JSON.parse(response.body, symbolize_names: true)
+
+      expect(result[:error]).to eq('quantity must be greater than zero')
+    end
+  end
 end
