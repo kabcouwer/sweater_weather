@@ -14,4 +14,14 @@ RSpec.describe Book, :vcr do
     expect(@book.title).to be_a(String)
     expect(@book.publisher).to be_an(Array)
   end
+
+  it 'can serialize' do
+    expect(@book.serialize).to be_a(Hash)
+    expect(@book.serialize).to have_key(:isbn)
+    expect(@book.serialize[:isbn]).to be_an(Array)
+    expect(@book.serialize).to have_key(:title)
+    expect(@book.serialize[:title]).to be_a(String)
+    expect(@book.serialize).to have_key(:publisher)
+    expect(@book.serialize[:publisher]).to be_an(Array)
+  end
 end

@@ -17,6 +17,6 @@ RSpec.describe Forecast, :vcr do
     expect(@forecast.serialize).to have_key(:summary)
     expect(@forecast.serialize[:summary]).to be_a(String)
     expect(@forecast.serialize).to have_key(:temperature)
-    expect(@forecast.serialize[:temperature]).to be_a(Float)
+    expect(@forecast.serialize[:temperature]).to be_a(String)
   end
 end
