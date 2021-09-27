@@ -4,8 +4,8 @@ RSpec.describe LibraryService, :vcr do
   describe 'book_search' do
     it 'can find book info by destination' do
       location = 'denver,co'
-
-      response = LibraryService.book_search(location)
+      quantity = 3
+      response = LibraryService.book_search(location, quantity)
 
       expect(response).to be_a(Hash)
 
@@ -14,6 +14,7 @@ RSpec.describe LibraryService, :vcr do
 
       expect(response).to have_key(:docs)
       expect(response[:docs]).to be_an(Array)
+      expect(response[:docs].count).to eq(quantity)
 
       book = response[:docs].first
 
