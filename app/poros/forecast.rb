@@ -10,7 +10,7 @@ class Forecast
   def serialize
     {
       summary: @summary,
-      temperature: @temperature
+      temperature: @temperature.to_s + ' F'
     }
   end
 end

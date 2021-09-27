@@ -8,8 +8,9 @@ class BookForcastSerializer
           destination: data[:q],
           forecast: forecast.serialize,
           total_books_found: data[:num_found],
-          books: books.serialize
-          }
+          books: books.map do |book|
+            book.serialize
+          end
         }
       }
     }
