@@ -1,6 +1,6 @@
 class LibraryFacade
-  def self.book_search(location)
-    response = LibraryService.book_search(location)
+  def self.book_search(location, quantity)
+    # response = LibraryService.book_search(location,quantity)
     return forecast(location)
   end
 
@@ -10,8 +10,8 @@ class LibraryFacade
     Forecast.new(response)
   end
 
-  def books(location)
-    response = LibraryFacade.book_search(location)
-    Book.new(response)
+  def self.books(location, quantity)
+    response = LibraryService.book_search(location, quantity)
+    response[:docs].map { |book| Book.new(book) }
   end
 end

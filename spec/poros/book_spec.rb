@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Book, :vcr do
   before :each do
+    quantity = 3
     location = 'denver, co'
-    data = (LibraryService.book_search(location))[:docs].first
+    data = (LibraryService.book_search(location, quantity))[:docs].first
     @book = Book.new(data)
   end
 
