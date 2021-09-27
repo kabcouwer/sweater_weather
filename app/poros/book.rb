@@ -8,4 +8,12 @@ class Book
     @title = data[:title]
     @publisher = data[:publisher]
   end
+
+  def serialize
+    {
+      isbn: @isbn,
+      title: @title,
+      publisher: @publisher
+    }
+  end
 end

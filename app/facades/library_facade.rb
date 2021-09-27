@@ -1,7 +1,7 @@
 class LibraryFacade
   def self.book_search(location, quantity)
-    # response = LibraryService.book_search(location,quantity)
-    return forecast(location)
+    data = LibraryService.book_search(location, quantity)
+    return data, forecast(location), books(location, quantity)
   end
 
   def self.forecast(location)
