@@ -37,6 +37,9 @@ group :development, :test do
   gem 'faraday'
   gem 'figaro'
   gem 'fast_jsonapi'
+  # gem 'jsonapi-serializer'
+  # gem 'active_model_serializers', '~> 0.10.0'
+  # gem 'surrealist'
 end
 
 group :development do
