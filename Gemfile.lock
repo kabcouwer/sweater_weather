@@ -113,6 +113,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (2.5.1)
     json_pure (2.5.1)
+    jwt (2.2.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -249,6 +250,7 @@ DEPENDENCIES
   faraday
   fast_jsonapi
   figaro
+  jwt
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry
