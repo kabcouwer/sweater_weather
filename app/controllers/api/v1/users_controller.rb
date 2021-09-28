@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
   def create
-    # binding.pry
-    render json: { error: 'Json content type required' }, status: :bad_request and return if request.content_type != 'application/json' && request.format.json? != true
+    unless request.content_type == 'application/json'
+      bad_request('Json content type required') and return
+    end
 
     body = JSON.parse(request.raw_post, symbolize_names: true)
     if body[:password] == body[:password_confirmation]
@@ -9,10 +10,10 @@ class Api::V1::UsersController < ApplicationController
       if user.save
         render json: UsersSerializer.new(user), status: :created
       else
-        render json: { errors: user.errors.full_messages }, status: :bad_request
+        bad_request(user.errors.full_messages)
       end
     else
-      render json: { error: 'Please send email and matching password and password_confirmation' }, status: :unprocessable_entity
+      password_mismatch
     end
   end
 
