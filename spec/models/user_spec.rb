@@ -14,4 +14,14 @@ RSpec.describe User, type: :model do
 
     it { should validate_presence_of(:password) }
   end
+
+  describe 'create_api_key' do
+    it 'creates an api key before saving a new user' do
+      user_1 = User.create!(email: Faker::Internet.email, password: 'password', password_confirmation: 'password')
+
+      expect(user_1.api_keys.first).to be_an(ApiKey)
+      expect(user_1.api_keys.count).to eq(1)
+      expect(user_1.api_keys.first.token).to be_a(String)
+    end
+  end
 end

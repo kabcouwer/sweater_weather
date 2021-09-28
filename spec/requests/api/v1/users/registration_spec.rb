@@ -30,7 +30,7 @@ RSpec.describe 'user registration' do
       password_confirmation: 'password'
     }
 
-    @headers = { 'CONTENT_TYPE' => 'application/json' }
+    @headers = { 'CONTENT_TYPE' => 'application/json' , 'ACCEPT' => 'application/json' }
   end
 
   describe 'happy paths' do

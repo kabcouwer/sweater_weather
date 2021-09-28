@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  # before_save :downcase_email
+  after_save :create_api_key
 
-  has_many :api_keys, as: :bearer 
+  has_many :api_keys, as: :bearer
 
   validates :email, presence: true
   validates :email, format: /@/
@@ -10,7 +10,11 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  # private
+  private
+  def create_api_key
+    self.api_keys.create!(token: SecureRandom.hex)
+  end
+
   # def downcase_email
   #   self.email = self.email.delete(' ').downcase
   # end
