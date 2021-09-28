@@ -13,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
         bad_request(user.errors.full_messages)
       end
     else
-      password_mismatch
+      password_mismatch_error
     end
   end
 
