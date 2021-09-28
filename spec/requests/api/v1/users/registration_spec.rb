@@ -30,7 +30,10 @@ RSpec.describe 'user registration' do
       password_confirmation: 'password'
     }
 
-    @headers = { 'CONTENT_TYPE' => 'application/json' }
+    @headers = {
+      'CONTENT_TYPE' => 'application/json',
+      'ACCEPT' => 'application/json'
+    }
   end
 
   describe 'happy paths' do
@@ -90,7 +93,7 @@ RSpec.describe 'user registration' do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result[:error]).to eq('Json content type required')
+      expect(result[:errors]).to eq('Json content type required')
     end
 
     xit 'returns error if header not set to application/json' do

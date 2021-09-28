@@ -14,4 +14,22 @@ RSpec.describe User, type: :model do
 
     it { should validate_presence_of(:password) }
   end
+
+  describe 'downcase email' do
+    it 'can downcase email before saving user to database' do
+      user = User.create!(email: 'DEV@ex.com', password: 'password', password_confirmation: 'password')
+
+      expect(user.email).to eq('dev@ex.com')
+    end
+  end
+
+  describe 'create_api_key' do
+    it 'creates an api key before saving a new user' do
+      user = User.create!(email: Faker::Internet.email, password: 'password', password_confirmation: 'password')
+
+      expect(user.api_keys.first).to be_an(ApiKey)
+      expect(user.api_keys.count).to eq(1)
+      expect(user.api_keys.first.token).to be_a(String)
+    end
+  end
 end
