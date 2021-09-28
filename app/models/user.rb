@@ -11,6 +11,13 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  def self.get_user_by_key(api_key)
+    select('users.*')
+    .joins(:api_keys)
+    .where('api_keys.token = ?', api_key)
+    .first
+  end
+
   private
   def create_api_key
     self.api_keys.create!(token: SecureRandom.hex)
