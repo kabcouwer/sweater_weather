@@ -3,8 +3,8 @@ class Api::V1::UsersController < ApplicationController
     # binding.pry
     render json: { error: 'Json content type required' }, status: :bad_request and return if request.content_type != 'application/json' && request.format.json? != true
 
-    body = JSON.parse(request.raw_post)
-    if body['password'] == body['password_confirmation']
+    body = JSON.parse(request.raw_post, symbolize_names: true)
+    if body[:password] == body[:password_confirmation]
       user = User.new(user_params)
       if user.save
         render json: UsersSerializer.new(user), status: :created
