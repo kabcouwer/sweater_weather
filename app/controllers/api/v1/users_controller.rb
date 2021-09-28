@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
   def create
-    body = JSON.parse request.raw_post
+    render json: { error: 'Json content type required' }, status: :bad_request and return if request.content_type != 'application/json'
 
+    body = JSON.parse(request.raw_post)
     if body['password'] == body['password_confirmation']
       user = User.new(user_params)
       if user.save
