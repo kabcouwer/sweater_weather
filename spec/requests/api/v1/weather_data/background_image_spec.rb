@@ -33,7 +33,7 @@ RSpec.describe 'background image for weather page', :vcr do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result[:error]).to eq('city and state is required')
+      expect(result[:errors]).to eq('City and state is required')
     end
 
     it 'returns bad request status if location not given' do
@@ -43,7 +43,7 @@ RSpec.describe 'background image for weather page', :vcr do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result[:error]).to eq('city and state is required')
+      expect(result[:errors]).to eq('City and state is required')
     end
   end
 end

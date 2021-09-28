@@ -6,7 +6,7 @@ class Api::V1::ForecastController < ApplicationController
 
       render json: ForecastSerializer.weather(current, daily[0..4], hourly[0..7])
     else
-      render json: { error: 'need city and state'}, status: :bad_request
+      bad_request('City and state is required')
     end
   end
 end
