@@ -1,12 +1,5 @@
 <!-- PROJECT INFO -->
-<h1 align="center">
-  <br>
-  <a href="https://github.com/kabcouwer/sweater_weather">
-    <img src="![weather](https://user-images.githubusercontent.com/80797707/135283412-ff5ff686-bca5-4e81-a8f1-820d9cbd8cce.jpeg)" alt="Logo" width="200" height="200"></a>
-  <br>
-  Sweater Weather API
-  <br>
-</h1>
+<h1 align="center">Sweater Weather API</h1>
 
 <h4 align="center">The backend portion of a road trip application!</h4>
 
