@@ -117,14 +117,11 @@ The Sweater Weather app can be used by calling endpoints through your rails serv
 
 
 ### Endpoint Documentation
-- Weather For a City
+All requests require `H - { Content-Type: application/json, Accept: application/json }`
 <br>
-Request:
-```
-GET /api/v1/forecast?location=denver,co
-Content-Type: application/json
-Accept: application/json
-```
+#### Weather For a City
+GET Request: `/api/v1/forecast?location=denver,co`
+
 Response:
 ```json
 {
@@ -158,45 +155,35 @@ Response:
 }
 ```
 
-- Background Image for a City
-<br>
-Request:
-```
-GET /api/v1/backgrounds?location=denver,co
-Content-Type: application/json
-Accept: application/json
-```
+#### Background Image for a City
+GET Request:`/api/v1/backgrounds?location=denver,co`
 
 Response:
 ```json
 {
-  "data": {
-    "type": "image",
-    "id": null,
-    "attributes": {
-      "image": {
-        "location": "denver,co",
-        "image_url": "https://unsplash.com/get/54e6d4444f50a814f1dc8460962930761c38d6ed534c704c7c2878dd954dc451_640.jpg",
-        "credit": {
-          "source": "unsplash.com",
-          "author": "quinntheislander",
-          "profile": "https://unsplash.com/quinntheislander"
+    "data": {
+        "type": "image",
+        "id": null,
+        "attributes": {
+            "image": {
+                "location": "denver,co",
+                "image_url": "https://images.unsplash.com/photo-1619856699906-09e1f58c98b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjM2NTl8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2MzI5MjY1MDQ&ixlib=rb-1.2.1&q=80&w=1080",
+                "credit": {
+                    "source": "unsplash.com",
+                    "author": "rdehamer",
+                    "profile": "https://unsplash.com/@rdehamer"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
-- User Registration
-<br>
-Request:
-```
-POST /api/v1/users
-Content-Type: application/json
-Accept: application/json
+#### User Registration
+POST Request:`/api/v1/users`
 
-body:
+Request Body:
+```json
 {
   "email": "whatever@example.com",
   "password": "password",
@@ -221,15 +208,11 @@ body:
 }
 ```
 
-- Login
-<br>
-Request:
-```
-POST /api/v1/sessions
-Content-Type: application/json
-Accept: application/json
+### Login
+POST Request:`/api/v1/sessions`
 
-body:
+Request Body:
+```json
 {
   "email": "whatever@example.com",
   "password": "password"
@@ -253,16 +236,11 @@ body:
 }
 ```
 
-- Roadtrip
-<br>
-Request:
-```
-POST /api/v1/road_trip
-Content-Type: application/json
-Accept: application/json
+### Roadtrip
+POST Request:`/api/v1/road_trip`
 
-body:
-
+Request Body:
+```json
 {
   "origin": "Denver,CO",
   "destination": "Pueblo,CO",
@@ -291,6 +269,7 @@ Response
 
 
 ## Database Schema
+![sweater_weather_db](https://user-images.githubusercontent.com/80797707/135311532-4070ac28-c142-41e3-bc8b-98c9cb9c439b.png)
 
 
 
