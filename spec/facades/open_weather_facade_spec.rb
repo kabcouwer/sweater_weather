@@ -15,4 +15,16 @@ RSpec.describe OpenWeatherFacade, :vcr do
       expect(response.third).to include(an_instance_of(HourlyWeather))
     end
   end
+
+  describe 'destination_weather' do
+    it 'has weather data for specific hour in the day' do
+      lat = 34
+      lon = 118
+      time = 15
+
+      response = OpenWeatherFacade.destination_weather(lat, lon, time)
+
+      expect(response).to be_an_instance_of(DestinationWeather)
+    end
+  end
 end
