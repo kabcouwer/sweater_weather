@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'user login' do
   before :each do
-    user_1 = User.create!(email: Faker::Internet.email,
+    @user_1 = User.create!(email: Faker::Internet.email,
                           password: 'password',
                           password_confirmation: 'password')
 

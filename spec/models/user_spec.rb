@@ -17,7 +17,9 @@ RSpec.describe User, type: :model do
 
   describe 'downcase email' do
     it 'can downcase email before saving user to database' do
-      user = User.create!(email: 'DEV@ex.com', password: 'password', password_confirmation: 'password')
+      user = User.create!(email: 'DEV@ex.com',
+                          password: 'password',
+                          password_confirmation: 'password')
 
       expect(user.email).to eq('dev@ex.com')
     end
@@ -30,6 +32,20 @@ RSpec.describe User, type: :model do
       expect(user.api_keys.first).to be_an(ApiKey)
       expect(user.api_keys.count).to eq(1)
       expect(user.api_keys.first.token).to be_a(String)
+    end
+  end
+
+  describe 'get_user_by_api_key' do
+    it 'can find user by their api_key' do
+      user1 = User.create!(email: Faker::Internet.email,
+                           password: 'password',
+                           password_confirmation: 'password')
+      user2 = User.create!(email: Faker::Internet.email,
+                          password: 'other_password',
+                          password_confirmation: 'other_password')
+      api_key = user1.api_keys.first.token
+
+      expect(User.get_user_by_key(api_key)).to eq(user1)
     end
   end
 end

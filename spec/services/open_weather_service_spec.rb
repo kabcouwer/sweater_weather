@@ -33,4 +33,30 @@ RSpec.describe OpenWeatherService, :vcr do
       expect(response.has_key?(:alerts)).to eq(false)
     end
   end
+
+  describe 'destination_weather' do
+    it 'can return weather at a destination' do
+      lat = 34
+      lon = 118
+
+      response = OpenWeatherService.destination_weather(lat, lon)
+
+      expect(response).to be_a(Hash)
+
+      expect(response).to have_key(:lat)
+      expect(response[:lat]).to eq(34)
+
+      expect(response).to have_key(:lon)
+      expect(response[:lon]).to eq(118)
+
+      expect(response).to have_key(:hourly)
+      expect(response[:hourly]).to be_an(Array)
+      expect(response[:hourly].first).to be_a(Hash)
+
+      expect(response.has_key?(:minutely)).to eq(false)
+      expect(response.has_key?(:alerts)).to eq(false)
+      expect(response.has_key?(:daily)).to eq(false)
+      expect(response.has_key?(:current)).to eq(false)
+    end
+  end
 end

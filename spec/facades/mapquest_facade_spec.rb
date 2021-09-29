@@ -12,4 +12,26 @@ RSpec.describe MapquestFacade, :vcr do
       expect(response.second).to be_a(Float)
     end
   end
+
+  describe 'route' do
+    it 'can find travel time for route' do
+      from = 'Denver,CO'
+      to = 'Los Angeles,CA'
+
+      response = MapquestFacade.route(from, to)
+
+      expect(response).to be_a(String)
+      expect(response).to_not eq('impossible')
+    end
+
+    it 'can returns error if route is not possible' do
+      from = 'Denver,CO'
+      to = 'London,UK'
+
+      response = MapquestFacade.route(from, to)
+
+      expect(response).to be_a(String)
+      expect(response).to eq('impossible')
+    end
+  end
 end

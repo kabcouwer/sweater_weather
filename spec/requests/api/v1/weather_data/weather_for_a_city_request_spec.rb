@@ -40,7 +40,7 @@ RSpec.describe 'weather data retrieval for a city' do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result[:error]).to eq('need city and state')
+      expect(result[:errors]).to eq('City and state is required')
     end
 
     it 'returns bad request status if no location is given' do
@@ -50,7 +50,7 @@ RSpec.describe 'weather data retrieval for a city' do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result[:error]).to eq('need city and state')
+      expect(result[:errors]).to eq('City and state is required')
     end
   end
 end
