@@ -135,5 +135,15 @@ RSpec.describe 'user can plan a road trip', :vcr do
 
       expect(result[:error]).to eq('Bad credentials')
     end
+
+    it 'returns error with incorrect content type' do
+      post '/api/v1/road_trip', params: @body_1
+
+      expect(response.status).to eq(400)
+
+      result = JSON.parse(response.body, symbolize_names: true)
+
+      expect(result[:errors]).to eq('Json content type required')
+    end
   end
 end

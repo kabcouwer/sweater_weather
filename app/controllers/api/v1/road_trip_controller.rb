@@ -2,8 +2,13 @@ class Api::V1::RoadTripController < ApplicationController
   before_action :authenticate, only: [:create]
 
   def create
+    unless request.content_type == 'application/json'
+      bad_request('Json content type required') and return
+    end
+
     body = JSON.parse(request.raw_post, symbolize_names: true)
     time = MapquestFacade.route(body[:origin], body[:destination])
+
     if time != 'impossible'
       trip_time = TimeHelper.length_of_trip(time)
       weather = get_weather_poro(body[:destination], trip_time)
